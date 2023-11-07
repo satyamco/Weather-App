@@ -12,14 +12,14 @@ const utilBox = document.querySelector('.util');
 
 async function getWeatherData(cityName){
     const response = await fetch(apiUrl + cityName + `&appid=${apiKey}`);
-    
+
     let data = await response.json();
 
     
     document.querySelector('.tempo').innerHTML = Math.round(data.main.temp) +'°C';
     document.querySelector('.city-name').innerHTML = data.name;
     document.querySelector('.h-value').innerHTML = data.main.humidity + '%';
-    document.querySelector('.ws-value').innerHTML = data.wind.speed + 'km/h';
+    document.querySelector('.ws-value').innerHTML =  data.wind.speed.toFixed(1) + 'km/h';
   
     
     if(data.weather[0].main == 'Clouds'){
@@ -43,12 +43,23 @@ async function getWeatherData(cityName){
     
 }
 
-inputBtn.addEventListener('click', () =>{
-    utilBox.style.display = 'none';
-    weatherInfo.style.display = 'block';
-    getWeatherData(inputCity.value);
-})
+function getWeather() {
+    const cityName = inputCity.value.trim();
+    if (cityName) {
+      utilBox.style.display = 'none';
+      weatherInfo.style.display = 'block';
+      getWeatherData(cityName);
+    }
+  }
+  
+  inputCity.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+      getWeather();
+    }
+  });
 
+  inputBtn.addEventListener('click', getWeather);
+  
 
 
 

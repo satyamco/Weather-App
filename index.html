@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="head">
+            <input type="text" placeholder="Enter City Name">
+            <img class="search-icon" src="images/search.png" alt="">
+        </div>
+
+        <div class="util">
+            <img src="https://cdn-icons-gif.flaticon.com/11200/11200542.gif" alt="">
+            <h2>Enter City Name and Get Weather Information</h2>
+        </div>
+
+        <div class="weather-info">
+            <div class="main">
+                <img class="w-image" src="images/clouds.png" alt="">
+                <h2 class="tempo"></h2>
+                <h1 class="city-name">Invailid City Name</h1>
+            </div>
+
+            <div class="footer">
+                <div class="hw">
+                    <img class="hmdt-icon" src="images/humidity.png" alt="">
+                    <div class="h-text">
+                        <h2 class="h-value"></h2>
+                        <h3>Humidity</h3>
+                    </div>
+                </div>
+
+                <div class="hw">
+                    <img src="images/wind.png" alt="">
+                    <div class="ws-text">
+                        <h2 class="ws-value">km/h</h2>
+                        <h3>Wind Speed</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

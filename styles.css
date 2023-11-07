@@ -1,0 +1,127 @@
+* { 
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html, body {
+width: 100%;
+height: 100%;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.card{
+    width: 450px;
+    height: 90%;
+    background: linear-gradient(138deg ,  rgb(94, 169, 145), #7e5a8a);
+    border-radius: 20px;
+    padding: 40px 40px;
+    overflow: hidden;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+}
+
+.card h4{
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(255, 219, 219);
+    display: none;
+}
+
+.head{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 30px;
+}
+
+.head input{
+   width: calc(100% - 50px);
+   margin-right: 10px;
+   padding: 12px 26px;
+   border: none;
+   border-radius: 30px;
+}
+.head img{
+    width: 38px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 50px;
+}
+
+.util{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-block: auto  ;
+}
+
+.util h2{
+    width: 300px;
+}
+
+.util img{
+    max-width: 100px;
+    border-radius: 100px;
+    opacity: .8;
+
+}
+
+.main{
+    text-align: center;
+    padding: 20px;
+}
+.main h2{
+    padding: 10px;
+}
+.city-name{
+    margin-bottom: 30px;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 30px;
+}
+.hw{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-self:center;
+}
+.hw img{
+    width: 60px;
+}
+
+.weather-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+
+
+
+
+
+
+@media (max-width:450px) {
+    .card{
+        width: 100%;
+        height: 100%;
+        padding: 40px 15px;
+        border-radius: 0;
+    }
+    .hw img{
+        width: 45px;
+    }
+}
